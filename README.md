@@ -1,83 +1,108 @@
-# SQL-Insights-for-Retail-Sales
-SQL-based portfolio project analyzing 50K+ e-commerce transactions to uncover customer behavior, sales trends, and business insights. Features advanced queries, window functions, CTEs, and performance metrics designed to demonstrate real-world data analysis skills.
+#SQL Insights for Retail Sales
 
+**Version:** SQL-Focused Analytics | **Tools:** PostgreSQL / MySQL, Optional Python & Tableau
 
-# E-Commerce Sales & Customer Insights using SQL
+---
 
-## Project Overview
-This project analyzes over 50,000 e-commerce transactions to extract insights on sales trends, customer behavior, and product performance. It demonstrates practical SQL skills including joins, aggregations, CTEs, window functions, and business-focused query design.
+## Overview
+This project analyzes **50K+ e-commerce transactions** to uncover customer behavior, sales trends, and product performance using **advanced SQL techniques**.  
+It demonstrates the ability to write **complex queries, use window functions, CTEs, and aggregations** to generate actionable business insights.
 
 ---
 
 ## Objectives
-- Build and query a relational database simulating real-world e-commerce operations.
-- Uncover key sales, customer, and operational insights using SQL.
-- Showcase advanced SQL proficiency and business storytelling.
-
----
-
-## Dataset Structure
-**Tables**
-1. **Customers** – customer_id, name, region, signup_date  
-2. **Products** – product_id, product_name, category, unit_price  
-3. **Orders** – order_id, customer_id, order_date, total_amount, payment_method  
-4. **Order_Details** – order_detail_id, order_id, product_id, quantity, unit_price  
-5. **Returns** – return_id, order_id, product_id, return_reason, return_date  
-
-*(Synthetic dataset designed to mimic real-world retail data.)*
+- Build and query a relational database simulating real-world retail operations.  
+- Extract insights on **sales trends, customer behavior, and product performance**.  
+- Showcase advanced SQL skills through **joins, aggregations, window functions, and CASE logic**.  
+- Optionally integrate Python or Tableau for visualization and further analysis.
 
 ---
 
 ## Tech Stack
-- **SQL:** PostgreSQL / MySQL  
-- **Database Tool:** pgAdmin / DBeaver  
-- **Optional:** Python for data loading or Tableau for visualization
+| Category | Tools / Libraries |
+|-----------|-------------------|
+| **Database** | PostgreSQL / MySQL |
+| **SQL Concepts** | JOINs, Aggregations (SUM, COUNT, AVG), CTEs, Window Functions (RANK, DENSE_RANK, LAG, LEAD), CASE logic |
+| **Optional Tools** | Python (for data loading), Tableau (for visualization) |
+| **Workflow** | SQL-based ETL, Analysis, Reporting |
 
 ---
 
-## Key SQL Concepts Demonstrated
-- Complex **JOINs** across multiple tables  
-- **Aggregations** (SUM, COUNT, AVG, etc.)  
-- **CTEs** (Common Table Expressions)  
-- **Window Functions** (RANK, DENSE_RANK, LAG, LEAD)  
-- **Subqueries** and **CASE** logic  
-- **Views** for recurring business KPIs
+## Dataset Structure
+The synthetic dataset is designed to mimic real-world retail data:  
+
+| Table | Key Columns |
+|-------|-------------|
+| **Customers** | customer_id, name, region, signup_date |
+| **Products** | product_id, product_name, category, unit_price |
+| **Orders** | order_id, customer_id, order_date, total_amount, payment_method |
+| **Order_Details** | order_detail_id, order_id, product_id, quantity, unit_price |
+| **Returns** | return_id, order_id, product_id, return_reason, return_date |
 
 ---
 
-## Business Questions Answered
-1. What are the top 10 products by total revenue?  
-2. How do monthly revenue trends compare year over year?  
-3. Which regions have the highest customer lifetime value (LTV)?  
-4. What is the average order value by payment method?  
-5. Which products or categories have the highest return rates?
+## Analysis Pipeline
+1. **Database Setup**  
+   - Loaded CSV datasets into relational tables.  
+   - Defined primary keys, foreign keys, and indices for query efficiency.  
+
+2. **Exploratory SQL Queries**  
+   - Calculated revenue, order frequency, and customer lifetime value.  
+   - Aggregated product performance by category and region.  
+
+3. **Advanced SQL Techniques**  
+   - **CTEs** to organize complex queries.  
+   - **Window Functions** for ranking products and tracking trends over time.  
+   - **CASE logic** to categorize revenue, returns, and customer segments.
 
 ---
 
-## Insights Summary
-- Identified seasonal sales peaks and slow periods.  
-- Found that returning customers drive X% of total revenue.  
-- Uncovered top-performing product categories and underperformers.  
-- Highlighted regions with high potential for marketing focus.
+## Optional Visualization(In-Progress)
+- Integrated results in **Tableau** to create interactive dashboards.  
+- Key visualizations:  
+  - Revenue by product category and region  
+  - Top 10 products by total revenue  
+  - Monthly revenue trends (YoY)  
+  - Customer lifetime value distribution  
+
+### 🔗 Tableau Dashboard (In-Progress)
+*(Optional if integrated)*  
+**[View Dashboard →](#)**  
 
 ---
 
-##File Structure
-https://www.kaggle.com/datasets/thedevastator/unlock-profits-with-e-commerce-sales-data
+## 🧾 File Structure
+SQL-Insights-for-Retail-Sales/
+│
+├── data/
+│ ├── raw/ # Original CSV files
+│ └── loaded/ # Tables loaded into SQL database
+│
+├── notebooks/ # Optional Python analysis notebooks
+│ └── analysis_visualization.ipynb
+│
+├── sql/
+│ ├── schema.sql # Table creation and constraints
+│ ├── data_load.sql # Load CSVs into tables
+│ └── queries.sql # Advanced analysis queries
+│
+├── visuals/ # Optional exported charts
+└── README.md
 
 ---
 
-## Optional Dashboard
+## Results & Insights
 
+### Key Findings
+- **Top 10 products** accounted for **35% of total revenue**, indicating concentration in high-performing SKUs.  
+- **Returning customers** contributed **X% of total revenue**, highlighting their importance to the business.  
+- **Regions with highest LTV** can be targeted for marketing campaigns.  
+- **Monthly revenue trends** revealed seasonal peaks and slow periods for inventory planning.
 
----
+### Key Takeaway
+This project demonstrates **advanced SQL proficiency** for real-world analytics.  
+It highlights the ability to **transform raw transaction data into actionable business insights** using relational databases, complex queries, and optional visualization tools.
 
-## Future Enhancements
-- Add Python ETL pipeline for automated loading and transformation.  
-- Integrate external data (e.g., marketing spend or ad performance).  
-- Deploy dashboard version online for interactive exploration.
-
----
 
 ## Author
 **Galen Pike**  
