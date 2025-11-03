@@ -1,4 +1,4 @@
-#SQL Insights for Retail Sales
+# SQL Insights for Retail Sales
 
 **Version:** SQL-Focused Analytics | **Tools:** PostgreSQL / MySQL, Optional Python & Tableau
 
